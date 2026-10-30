@@ -1,0 +1,91 @@
+{
+  "contract": {
+    "original": "service-agreement-v1.pdf",
+    "changed": "service-agreement-v2.pdf",
+    "edits": [
+      {
+        "id": "effective-date",
+        "kind": "replacement",
+        "page": 1,
+        "description": "Effective date moved by one month",
+        "original": "1 March 2026",
+        "changed": "1 April 2026"
+      },
+      {
+        "id": "moved-paragraph",
+        "kind": "move",
+        "page": 1,
+        "description": "Background paragraph about service levels moved from the end to the start of the section",
+        "original": "Both parties want the service levels",
+        "changed": "Both parties want the service levels"
+      },
+      {
+        "id": "monthly-fee",
+        "kind": "replacement",
+        "page": 2,
+        "description": "Monthly service fee increased",
+        "original": "USD 12,500",
+        "changed": "USD 13,750"
+      },
+      {
+        "id": "payment-term",
+        "kind": "replacement",
+        "page": 2,
+        "description": "Payment term extended from 30 to 45 days",
+        "original": "thirty (30) days",
+        "changed": "forty-five (45) days"
+      },
+      {
+        "id": "deleted-clause",
+        "kind": "deletion",
+        "page": 2,
+        "description": "Annual price review clause removed",
+        "original": "Price review. Once in each Contract Year",
+        "changed": null
+      },
+      {
+        "id": "end-date",
+        "kind": "replacement",
+        "page": 3,
+        "description": "Initial term end date moved by one month",
+        "original": "28 February 2029",
+        "changed": "31 March 2029"
+      },
+      {
+        "id": "liability-cap",
+        "kind": "replacement",
+        "page": 3,
+        "description": "Liability cap raised",
+        "original": "USD 250,000",
+        "changed": "USD 400,000"
+      },
+      {
+        "id": "new-clause",
+        "kind": "insertion",
+        "page": 3,
+        "description": "New clause on the location of Customer Data",
+        "original": null,
+        "changed": "Data location. The Supplier stores and processes Customer Data only"
+      },
+      {
+        "id": "reworded-obligation",
+        "kind": "replacement",
+        "page": 4,
+        "description": "Effort standard changed from reasonable to best endeavours",
+        "original": "reasonable endeavours",
+        "changed": "best endeavours"
+      }
+    ]
+  },
+  "floorPlan": {
+    "original": "floor-plan-rev-a.pdf",
+    "changed": "floor-plan-rev-b.pdf",
+    "edits": [
+      "Meeting room door moved to the west end of its wall",
+      "New partition wall and door create a storage room",
+      "New window in the west wall of office 1",
+      "Open plan label moved, storage label added",
+      "Title block revision changed from A to B"
+    ]
+  }
+}

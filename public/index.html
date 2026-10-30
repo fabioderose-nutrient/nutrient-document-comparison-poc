@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document comparison</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/config.js"></script>
+    <script src="https://cdn.cloud.pspdfkit.com/pspdfkit-web@1.24.0/nutrient-viewer.js"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>Document comparison</h1>
+      <div class="modes" role="tablist">
+        <button id="mode-text" class="mode active" role="tab" aria-selected="true">Text comparison</button>
+        <button id="mode-visual" class="mode" role="tab" aria-selected="false">Visual comparison</button>
+      </div>
+      <form id="pair-form" class="pair">
+        <select id="sample" aria-label="Sample documents"></select>
+        <label class="file">Original <input id="file-original" type="file" accept="application/pdf" /></label>
+        <label class="file">Changed <input id="file-changed" type="file" accept="application/pdf" /></label>
+        <button id="compare" type="submit">Compare</button>
+      </form>
+    </header>
+
+    <main id="text-view" class="text-view">
+      <aside class="changes">
+        <div class="changes-head">
+          <h2>Changes</h2>
+          <p id="summary" class="summary">Loading the documents…</p>
+          <div id="filters" class="filters"></div>
+        </div>
+        <ol id="change-list" class="change-list"></ol>
+      </aside>
+      <section class="viewer-pane">
+        <div class="pane-title"><span class="dot original"></span><span id="name-original">Original</span></div>
+        <div id="viewer-original" class="viewer"></div>
+      </section>
+      <section class="viewer-pane">
+        <div class="pane-title"><span class="dot changed"></span><span id="name-changed">Changed</span></div>
+        <div id="viewer-changed" class="viewer"></div>
+      </section>
+    </main>
+
+    <main id="visual-view" class="visual-view" hidden>
+      <div class="legend">
+        <span><i class="swatch a"></i>Only in the original</span>
+        <span><i class="swatch b"></i>Only in the changed version</span>
+        <span><i class="swatch same"></i>In both</span>
+        <span class="hint">Pages are overlaid. Use <b>Align Documents</b> when the two pages are shifted or scanned at a different scale.</span>
+      </div>
+      <div id="viewer-visual" class="viewer"></div>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
